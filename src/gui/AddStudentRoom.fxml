@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="506.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AddStudentRoomController">
+  <tabs>
+    <Tab text="Add student room">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="registerRoomInfo" alignment="CENTER" layoutX="-21.0" layoutY="14.0" prefHeight="17.0" prefWidth="573.0" text="Student room is not yet added" />
+                  <Label layoutX="100.0" layoutY="88.0" text="Room number:" />
+                  <Label layoutX="118.0" layoutY="127.0" />
+                  <TextField fx:id="roomNrInput" layoutX="191.0" layoutY="84.0" />
+                  <Button layoutX="451.0" layoutY="348.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
+                  <Button layoutX="209.0" layoutY="227.0" mnemonicParsing="false" onAction="#addRoomButton" text="Add student room" />
+                  <Label layoutX="118.0" layoutY="127.0" text="Building ID:" />
+                  <Label fx:id="roomIDT" alignment="CENTER" layoutX="26.0" layoutY="47.0" prefHeight="17.0" prefWidth="479.0" text="Room id:" />
+                  <TextField fx:id="characteristicsInput" layoutX="191.0" layoutY="162.0" />
+                  <Label layoutX="100.0" layoutY="166.0" text="Characteristics:" />
+                  <ChoiceBox fx:id="buildingIDChoice" layoutX="191.0" layoutY="123.0" prefWidth="150.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Modify student room">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="71.0" layoutY="42.0" text="Select Student Room" />
+                  <Label layoutX="81.0" layoutY="291.0" />
+                  <Label layoutX="259.0" layoutY="88.0" text="Room number:" />
+                  <Label layoutX="277.0" layoutY="120.0" text="Building ID:" />
+                  <TextField fx:id="RoomNr" layoutX="348.0" layoutY="84.0" />
+                  <TextField fx:id="buildingIDRoom" layoutX="348.0" layoutY="116.0" />
+                  <Button layoutX="365.0" layoutY="181.0" mnemonicParsing="false" onAction="#changeRoom" text="Save student room" />
+                  <Button layoutX="97.0" layoutY="287.0" mnemonicParsing="false" onAction="#removeRoom" text="Remove" />
+                  <Button layoutX="452.0" layoutY="348.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
+                  <ListView fx:id="myListView" layoutX="27.0" layoutY="74.0" prefHeight="200.0" prefWidth="200.0" />
+                  <Label fx:id="characteristicsLabel" layoutX="261.0" layoutY="152.0" text="characteristics:" />
+                  <TextField fx:id="characteristics" layoutX="348.0" layoutY="148.0" />
+               </children>
+            </AnchorPane>
+         </content>
+    </Tab>
+      <Tab text="Add building">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="buildinginfo" alignment="CENTER" layoutX="-5.0" layoutY="14.0" prefHeight="17.0" prefWidth="525.0" text="Building is not yet added" />
+                  <Label layoutX="127.0" layoutY="87.0" text="Address:" />
+                  <Label layoutX="118.0" layoutY="127.0" />
+                  <TextField fx:id="addressInput" layoutX="191.0" layoutY="83.0" />
+                  <TextField fx:id="countryInput" layoutX="191.0" layoutY="123.0" />
+                  <Button layoutX="450.0" layoutY="348.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="25.0" prefWidth="42.0" text="Back" />
+                  <Button layoutX="216.0" layoutY="274.0" mnemonicParsing="false" onAction="#addBuildingButton" text="Add building" />
+                  <Label layoutX="127.0" layoutY="127.0" text="Country:" />
+                  <Label layoutX="148.0" layoutY="167.0" text="City:" />
+                  <TextField fx:id="cityInput" layoutX="191.0" layoutY="163.0" />
+                  <TextField fx:id="zipInput" layoutX="191.0" layoutY="206.0" />
+                  <Label layoutX="152.0" layoutY="210.0" text="Zip:" />
+                  <Label fx:id="buildingIDT" alignment="CENTER" layoutX="59.0" layoutY="51.0" prefHeight="17.0" prefWidth="397.0" text="Building ID:" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Modify building">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="87.0" layoutY="42.0" text="Select building" />
+                  <Label layoutX="81.0" layoutY="291.0" />
+                  <Label layoutX="282.0" layoutY="88.0" text="Address:" />
+                  <Label layoutX="304.0" layoutY="120.0" text="City:" />
+                  <Label layoutX="284.0" layoutY="156.0" text="Country:" />
+                  <Label layoutX="306.0" layoutY="191.0" text="Zip:" />
+                  <TextField fx:id="Address" layoutX="348.0" layoutY="84.0" />
+                  <TextField fx:id="City" layoutX="348.0" layoutY="116.0" />
+                  <TextField fx:id="Country" layoutX="348.0" layoutY="152.0" />
+                  <TextField fx:id="Zip" layoutX="348.0" layoutY="187.0" />
+                  <Button layoutX="379.0" layoutY="224.0" mnemonicParsing="false" onAction="#changeBuilding" text="Save building" />
+                  <Button layoutX="97.0" layoutY="287.0" mnemonicParsing="false" onAction="#removeBuilding" text="Remove" />
+                  <Button layoutX="456.0" layoutY="348.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
+                  <ListView fx:id="myListViewBuilding" layoutX="27.0" layoutY="74.0" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
